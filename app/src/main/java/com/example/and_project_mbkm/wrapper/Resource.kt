@@ -1,14 +1,7 @@
 package com.example.and_project_mbkm.wrapper
 
-sealed class Resource<T>(
-    val payload: T? = null,
-    val message: String? = null,
-    val exception: Exception? = null
-) {
-    class Success<T>(val data: T?) : Resource<T>(data)
-    class Empty<T>(data: T? = null) : Resource<T>(data)
-    class Error<T>(exception: Exception?, message: String?) :
-        Resource<T>(message = message, exception = exception)
-
+sealed class Resource<T>(val data: T? = null, val message: String? = null) {
+    class Success<T>(data: T) : Resource<T>(data)
+    class Error<T>(message: String, data: T? = null) : Resource<T>(data, message)
     class Loading<T>(data: T? = null) : Resource<T>(data)
 }
