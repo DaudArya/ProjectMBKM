@@ -54,4 +54,24 @@
     <string name="save">Save</string>
     <string name="delete_account">Delete Account</string>
     <string name="confirmpw">Confirm Password</string>
+    <string name="yourBalance">Your Balance</string>
+    <string name="Settings">Settings</string>
+
+
+    <string name="profile">My Profile</string>
+    <string name="fullname">Fullname</string>
+    <string name="phone">Phone</string>
+    <string name="birthday">Birthday</string>
+    <string name="edit">Edit</string>
+    <string name="update">Update</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="signup_login_hint">Already have an account? Sign In</string>
+    <string name="login_signup_hint">Don\'t have an account? Sign Up</string>
+    <string name="menu_dashboard">Dashboard</string>
+    <string name="menu_Ticket">Ticket</string>
+    <string name="menu_history">History</string>
+    <string name="menu_profile">Profile</string>
+    <string name="date">Date</string>
+
 </resources>

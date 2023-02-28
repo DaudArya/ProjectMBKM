@@ -71,6 +71,7 @@ class RegisterActivity : AppCompatActivity() {
         register()
         alreadyHaveAccount()
         chooseImage()
+        supportActionBar?.hide()
     }
 
     private fun register() {

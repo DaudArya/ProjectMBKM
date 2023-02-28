@@ -24,13 +24,14 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        supportActionBar?.hide()
         startSplashScreen()
+
     }
 
     private fun startSplashScreen() {
         binding.logo.alpha = 0f
-        binding.logo.animate().setDuration(2000).alpha(1f).withEndAction {
+        binding.logo.animate().setDuration(1000).alpha(1f).withEndAction {
             checkCredential()
         }
     }

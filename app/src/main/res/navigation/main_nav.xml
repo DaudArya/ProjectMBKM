@@ -3,32 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav"
-    app:startDestination="@id/loginFragment">
-
+    app:startDestination="@id/homeFragment3">
     <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.example.and_project_mbkm.ui.fragment.login.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        android:id="@+id/analyticsFragment2"
+        android:name="com.example.and_project_mbkm.ui.fragment.analytics.AnalyticsFragment"
+        android:label="fragment_analytics"
+        tools:layout="@layout/fragment_analytics" />
+    <fragment
+        android:id="@+id/walletFragment3"
+        android:name="com.example.and_project_mbkm.ui.fragment.wallet.WalletFragment"
+        android:label="fragment_wallet"
+        tools:layout="@layout/fragment_wallet" />
+    <fragment
+        android:id="@+id/homeFragment3"
+        android:name="com.example.and_project_mbkm.ui.fragment.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_loginFragment_to_registerFragment"
-            app:destination="@id/registerFragment" />
+            android:id="@+id/action_homeFragment3_to_analyticsFragment2"
+            app:destination="@id/analyticsFragment2" />
         <action
-            android:id="@+id/action_loginFragment_to_mainActivity"
-            app:destination="@id/mainActivity" />
+            android:id="@+id/action_homeFragment3_to_walletFragment3"
+            app:destination="@id/walletFragment3" />
+        <action
+            android:id="@+id/action_homeFragment3_to_settingFragment"
+            app:destination="@id/settingFragment" />
     </fragment>
     <fragment
-        android:id="@+id/registerFragment"
-        android:name="com.example.and_project_mbkm.ui.fragment.register.RegisterFragment"
-        android:label="fragment_register"
-        tools:layout="@layout/fragment_register" >
-        <action
-            android:id="@+id/action_registerFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
-    </fragment>
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.example.and_project_mbkm.ui.activity.main.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" />
+        android:id="@+id/settingFragment"
+        android:name="com.example.and_project_mbkm.ui.fragment.setting.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
 </navigation>
