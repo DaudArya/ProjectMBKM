@@ -42,7 +42,15 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         goToSetting()
+        goToSpend()
     }
+
+    private fun goToSpend(){
+        binding.profileAdd.setOnClickListener(){
+            findNavController().navigate(R.id.action_homeFragment3_to_spendingFragment)
+        }
+    }
+
 
     private fun goToSetting (){
         binding.setting.setOnClickListener(){

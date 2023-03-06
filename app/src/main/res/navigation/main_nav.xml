@@ -28,10 +28,18 @@
         <action
             android:id="@+id/action_homeFragment3_to_calendarFragment"
             app:destination="@id/calendarFragment" />
+        <action
+            android:id="@+id/action_homeFragment3_to_spendingFragment"
+            app:destination="@id/spendingFragment" />
     </fragment>
     <fragment
         android:id="@+id/calendarFragment"
         android:name="com.example.and_project_mbkm.ui.fragment.calendar.CalendarFragment"
         android:label="fragment_calendar"
         tools:layout="@layout/fragment_calendar" />
+    <fragment
+        android:id="@+id/spendingFragment"
+        android:name="com.example.and_project_mbkm.ui.fragment.spending.SpendingFragment"
+        android:label="fragment_spending"
+        tools:layout="@layout/fragment_spending" />
 </navigation>
