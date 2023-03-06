@@ -56,6 +56,11 @@
     <string name="confirmpw">Confirm Password</string>
     <string name="yourBalance">Your Balance</string>
     <string name="Settings">Settings</string>
+    <string name="Category">Category</string>
+    <string name="Categorys">Food,Education,etc.</string>
+    <string name="Nominal">Nominal</string>
+    <string name="Cash">Cash</string>
+    <string name="Money">Rp.12.000</string>
 
 
     <string name="profile">My Profile</string>

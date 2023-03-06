@@ -68,48 +68,48 @@ class RegisterActivity : AppCompatActivity() {
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        register()
+//        register()
         alreadyHaveAccount()
         chooseImage()
         supportActionBar?.hide()
     }
 
-    private fun register() {
-        binding.registerButton.setOnClickListener {
-            val email = binding.emailEditText.text.toString().trim()
-            val password = binding.passwordEditText.text.toString().trim()
-            val confirmPassword = binding.confirmPasswordEditText.text.toString().trim()
-            val username = binding.usernameEditText.text.toString().trim()
-            val profilePhoto = binding.profileImage.drawable.toBitmap()
-
-            when {
-                !email.isEmailValid() -> {
-                    binding.emailEditText.error = "Email tidak valid"
-                }
-                !password.isPasswordValid() -> {
-                    binding.passwordEditText.error = "Password minimal 6 karakter"
-                }
-                confirmPassword != password -> {
-                    binding.confirmPasswordEditText.error = "Password tidak sesuai"
-                }
-                !username.isUsernameValid() -> {
-                    binding.usernameEditText.error = "Username minimal 3 karakter"
-                }
-                else -> {
-                    viewModel.register(username, email, password, profilePhoto)
-
-                    viewModel.state.observe(this) { result ->
-                        if (result.user == 0L) {
-                            this.showLongToast("Something went wrong")
-                        } else {
-                            this.showLongToast("Resgistrasi berhasil, silahkan login")
-                            navigateToLogin()
-                        }
-                    }
-                }
-            }
-        }
-    }
+//    private fun register() {
+//        binding.registerButton.setOnClickListener {
+//            val email = binding.emailEditText.text.toString().trim()
+//            val password = binding.passwordEditText.text.toString().trim()
+//            val confirmPassword = binding.confirmPasswordEditText.text.toString().trim()
+//            val username = binding.usernameEditText.text.toString().trim()
+//            val profilePhoto = binding.profileImage.drawable.toBitmap()
+//
+//            when {
+//                !email.isEmailValid() -> {
+//                    binding.emailEditText.error = "Email tidak valid"
+//                }
+//                !password.isPasswordValid() -> {
+//                    binding.passwordEditText.error = "Password minimal 6 karakter"
+//                }
+//                confirmPassword != password -> {
+//                    binding.confirmPasswordEditText.error = "Password tidak sesuai"
+//                }
+//                !username.isUsernameValid() -> {
+//                    binding.usernameEditText.error = "Username minimal 3 karakter"
+//                }
+//                else -> {
+//                    viewModel.register(username, email, password, profilePhoto)
+//
+//                    viewModel.state.observe(this) { result ->
+//                        if (result.user == 0L) {
+//                            this.showLongToast("Something went wrong")
+//                        } else {
+//                            this.showLongToast("Resgistrasi berhasil, silahkan login")
+//                            navigateToLogin()
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
 
     private fun alreadyHaveAccount() {
         binding.toLoginButton.setOnClickListener {

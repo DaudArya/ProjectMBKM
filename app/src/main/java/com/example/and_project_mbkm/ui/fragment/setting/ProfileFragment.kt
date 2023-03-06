@@ -9,24 +9,19 @@ import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.provider.Settings
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
-import androidx.core.graphics.drawable.toBitmap
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import coil.load
 import com.example.and_project_mbkm.R
-import com.example.and_project_mbkm.databinding.FragmentHomeBinding
-import com.example.and_project_mbkm.databinding.FragmentSettingBinding
+import com.example.and_project_mbkm.databinding.FragmentProfileBinding
 import com.example.and_project_mbkm.model.User
-import com.example.and_project_mbkm.ui.activity.main.MainActivity
-import com.example.and_project_mbkm.ui.activity.splash.SplashActivity
-import com.example.and_project_mbkm.ui.fragment.home.HomeViewModel
-import com.example.and_project_mbkm.wrapper.Extension.isUsernameValid
+import com.example.and_project_mbkm.ui.activity.auth.AuthActivity
 import com.example.and_project_mbkm.wrapper.Extension.loadImage
 import com.example.and_project_mbkm.wrapper.Extension.showLongToast
 import com.karumi.dexter.Dexter
@@ -44,7 +39,7 @@ data class ProfileState(
 )
 
 @AndroidEntryPoint
-class SettingFragment : Fragment() {
+class ProfileFragment : Fragment() {
     private var user: User? = null
     private val permissions = listOf(
         Manifest.permission.CAMERA,
@@ -52,7 +47,7 @@ class SettingFragment : Fragment() {
         Manifest.permission.WRITE_EXTERNAL_STORAGE
     )
 
-    private var _binding: FragmentSettingBinding? = null
+    private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
 
     private val viewModel: SettingViewModel by viewModels()
@@ -85,7 +80,7 @@ class SettingFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = FragmentSettingBinding.inflate(inflater, container, false)
+        _binding = FragmentProfileBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -93,38 +88,34 @@ class SettingFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         logout()
-        getUserEmail()
-        updateUser()
+//        getUserEmail()
+//        updateUser()
         moveToHome()
         chooseImage()
     }
 
     private fun logout() {
         binding.btnLogout.setOnClickListener {
-            viewModel.logout()
-            requireActivity().run {
-                val intent = Intent(this , SplashActivity::class.java)
-                startActivity(intent)
+            viewModel.statusLogin(false)
+            viewModel.getLoginStatus().observe(viewLifecycleOwner) {
+                if (it == true) {
+                    activity?.let { it ->
+                        val intent = Intent(it, AuthActivity::class.java)
+                        it.startActivity(intent)}
+                } else {
+                    requireContext()
+                }
+            }
             }
 
         }
-    }
+
 
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
     }
 
-    private fun getUserEmail() {
-        viewModel.email.observe(viewLifecycleOwner) { email ->
-            findUserData(email)
-        }
-    }
-
-    private fun findUserData(email: String) {
-        viewModel.getUser(email)
-        getUserData()
-    }
 
     private fun getUserData() {
         viewModel.userData.observe(viewLifecycleOwner) { result ->
@@ -143,43 +134,6 @@ class SettingFragment : Fragment() {
         }
     }
 
-    private fun updateUser() {
-        binding.updateButton.setOnClickListener {
-            val username = binding.usernameEditText.text.toString().trim()
-            val name = binding.fullNameEditText.text.toString().trim()
-            val date = binding.dateOfBirthEditText.text.toString().trim()
-            val address = binding.addressEditText.text.toString().trim()
-            val profilePhoto = binding.profileImage.drawable.toBitmap()
-
-            user?.let {
-                it.username = username
-                it.name = name
-                it.dateOfBirth = date
-                it.address = address
-                it.profilePhoto = profilePhoto
-
-                when {
-                    !username.isUsernameValid() -> {
-                        binding.usernameEditText.error = "Username minimal 3 karakter"
-                    }
-                    else -> {
-                        viewModel.updateUser(it)
-                        viewModel.updateResult.observe(viewLifecycleOwner) { result ->
-                            if (result.result == 1) {
-                                requireContext().showLongToast("Berhasil diupdate")
-                                activity?.let {
-                                    val intent = Intent(it, MainActivity::class.java)
-                                    it.startActivity(intent)}
-                            } else if (result.error.isNotEmpty()) {
-                                requireContext().showLongToast("Gagal diupdate, ${result.error}")
-                            }
-                        }
-                    }
-                }
-            }
-
-        }
-    }
 
     private fun moveToHome() {
         binding.toolbarId.setNavigationOnClickListener {

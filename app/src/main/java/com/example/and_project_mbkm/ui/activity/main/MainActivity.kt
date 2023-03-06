@@ -1,6 +1,5 @@
 package com.example.and_project_mbkm.ui.activity.main
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -9,7 +8,6 @@ import android.view.View
 import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.activity.viewModels
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
@@ -18,7 +16,6 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.and_project_mbkm.R
 import com.example.and_project_mbkm.databinding.ActivityMainBinding
-import com.example.and_project_mbkm.ui.activity.auth.AuthActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -67,17 +64,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.another_item_1 -> {
-                showToast("Another Menu Item 1 Selected")
-            }
 
-            R.id.another_item_2 -> {
-                showToast("Another Menu Item 2 Selected")
-            }
-
-            R.id.another_item_3 -> {
-                showToast("Another Menu Item 3 Selected")
-            }
         }
         return super.onOptionsItemSelected(item)
     }
@@ -116,6 +103,7 @@ class MainActivity : AppCompatActivity() {
         // Hence, get a reference of `NavHostFragment`
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.main_fragment) as NavHostFragment
+
 
         // set navigation controller
         navController = navHostFragment.findNavController()

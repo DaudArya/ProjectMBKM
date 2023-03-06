@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/another_item_1"
-        android:title="Another Item 1" />
+        android:id="@+id/homeFragment3"
+        android:title="Home"
+        android:contentDescription="Home"
+        android:icon="@drawable/journalbookmarkfill__1_"/>
+
     <item
-        android:id="@+id/another_item_2"
-        android:title="Another Item 2" />
-    <item
-        android:id="@+id/another_item_3"
-        android:title="Another Item 3" />
+        android:id="@+id/calendarFragment"
+        android:title="Calendar"
+        android:contentDescription="Calendar"
+        android:icon="@drawable/calendarevent__1_"/>
 </menu>

@@ -6,13 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.activity.viewModels
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.and_project_mbkm.R
 import com.example.and_project_mbkm.databinding.FragmentHomeBinding
-import com.example.and_project_mbkm.ui.activity.auth.AuthActivity
-import com.example.and_project_mbkm.ui.activity.login.LoginViewModel
+import com.example.and_project_mbkm.ui.activity.Settings.SettingActivity
 import com.example.and_project_mbkm.ui.activity.splash.SplashActivity
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -48,7 +46,10 @@ class HomeFragment : Fragment() {
 
     private fun goToSetting (){
         binding.setting.setOnClickListener(){
-            findNavController().navigate(R.id.action_homeFragment3_to_settingFragment)
+            requireActivity().run {
+                val intent = Intent(this , SettingActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 }

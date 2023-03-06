@@ -1,21 +1,18 @@
 package com.example.and_project_mbkm.di
 
-import com.example.and_project_mbkm.data.local.dao.UserDao
-import com.example.and_project_mbkm.data.repository.AuthRepository
-import com.example.and_project_mbkm.data.repository.impl.AuthRepositoryImpl
+import com.example.and_project_mbkm.data.repository.AuthApiRepository
+import com.example.and_project_mbkm.data.repository.UserRepositoryImpl
+import dagger.Binds
 import dagger.Module
-import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.components.SingletonComponent
+import dagger.hilt.android.components.ViewModelComponent
 
 @Module
-@InstallIn(SingletonComponent::class)
-object RepositoryModule {
+@InstallIn(ViewModelComponent::class)
+abstract class RepositoryModule {
 
 
-    @Provides
-    fun provideAuthRepository(userDao: UserDao): AuthRepository {
-        return AuthRepositoryImpl(userDao)
-    }
+    @Binds
+    abstract fun provideAuthRepository(authRepositoryImpl: UserRepositoryImpl): AuthApiRepository
 
 }

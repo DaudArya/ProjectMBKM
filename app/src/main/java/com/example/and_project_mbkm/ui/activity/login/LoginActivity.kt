@@ -1,7 +1,9 @@
 package com.example.and_project_mbkm.ui.activity.login
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.AttributeSet
 import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -32,63 +34,67 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+
         supportActionBar?.hide()
 
-        login()
-        createAccount()
+//        login()
+//        createAccount()
     }
 
-    private fun login() {
-        binding.loginButton.setOnClickListener {
-            val email = binding.emailEditText.text.toString().trim()
-            val password = binding.passwordEditText.text.toString().trim()
-
-            when {
-                !email.isEmailValid() -> {
-                    binding.emailEditText.error = "Email tidak valid"
-                }
-                else -> {
-                    viewModel.login(email, password)
-
-                    viewModel.state.observe(this) { result ->
-                        if (result.result) {
-                            navigateToMovieList()
-                            viewModel.setUser(result.user?.email!!)
-                            this.showLongToast("Login Success")
-                        } else if (result.error.isNotEmpty()) {
-                            this.showLongToast(result.error)
-                        } else if (result.isLoading) {
-                            showLoading(result.isLoading)
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    private fun showLoading(isLoading: Boolean) {
-        if (isLoading) {
-            binding.progressCircular.visibility = View.VISIBLE
-        } else {
-            binding.progressCircular.visibility
-        }
-    }
-
-    private fun navigateToMovieList() {
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
-        finish()
-    }
-
-    private fun createAccount() {
-        binding.toRegisterButton.setOnClickListener {
-            navigateToRegister()
-        }
-    }
-
-    private fun navigateToRegister() {
-        val intent = Intent(this, RegisterActivity::class.java)
-        startActivity(intent)
-        finish()
-    }
+//
+//
+//    private fun login() {
+//        binding.loginButton.setOnClickListener {
+//            val email = binding.emailEditText.text.toString().trim()
+//            val password = binding.passwordEditText.text.toString().trim()
+//
+//            when {
+//                !email.isEmailValid() -> {
+//                    binding.emailEditText.error = "Email tidak valid"
+//                }
+//                else -> {
+//                    viewModel.login(email, password)
+//
+//                    viewModel.state.observe(this) { result ->
+//                        if (result.result) {
+//                            navigateToMovieList()
+//                            viewModel.setUser(result.user?.email!!)
+//                            this.showLongToast("Login Success")
+//                        } else if (result.error.isNotEmpty()) {
+//                            this.showLongToast(result.error)
+//                        } else if (result.isLoading) {
+//                            showLoading(result.isLoading)
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
+//
+//    private fun showLoading(isLoading: Boolean) {
+//        if (isLoading) {
+//            binding.progressCircular.visibility = View.VISIBLE
+//        } else {
+//            binding.progressCircular.visibility
+//        }
+//    }
+//
+//    private fun navigateToMovieList() {
+//        val intent = Intent(this, MainActivity::class.java)
+//        startActivity(intent)
+//        finish()
+//    }
+//
+//    private fun createAccount() {
+//        binding.toRegisterButton.setOnClickListener {
+//            navigateToRegister()
+//        }
+//    }
+//
+//    private fun navigateToRegister() {
+//        val intent = Intent(this, RegisterActivity::class.java)
+//        startActivity(intent)
+//        finish()
+//    }
 }
