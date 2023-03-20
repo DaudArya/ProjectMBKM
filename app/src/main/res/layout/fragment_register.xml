@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg2"
-    tools:context=".ui.activity.register.RegisterFragment">
+    tools:context=".ui.fragment.register.RegisterFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
@@ -54,6 +54,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="text"
                 android:maxLines="1"
+                android:textColor="@color/blueDark"
                 android:textColorHint="@color/dark_blue" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -65,7 +66,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="24dp"
-            android:hint="@string/username"
+            android:hint="@string/name"
             app:boxBackgroundColor="@color/grey"
             app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
             app:layout_constraintEnd_toEndOf="parent"
@@ -79,6 +80,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="text"
                 android:maxLines="1"
+                android:textColor="@color/blueDark"
                 android:textColorHint="@color/dark_blue" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -104,6 +106,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="text"
                 android:maxLines="1"
+                android:textColor="@color/blueDark"
                 android:textColorHint="@color/dark_blue" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -129,6 +132,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="text"
                 android:maxLines="1"
+                android:textColor="@color/blueDark"
                 android:textColorHint="@color/dark_blue" />
         </com.google.android.material.textfield.TextInputLayout>
 

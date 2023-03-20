@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.and_project_mbkm">
+    package="com.sigarda.jurnalkas">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -11,7 +11,7 @@
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application
-        android:name=".App"
+        android:name="com.sigarda.jurnalkas.App"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -22,13 +22,13 @@
         android:theme="@style/Theme.ANDPROJECTMBKM"
         tools:targetApi="31">
         <activity
-            android:name="com.example.and_project_mbkm.ui.activity.auth.AuthActivity"
+            android:name="com.sigarda.jurnalkas.ui.activity.auth.AuthActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activity.Settings.SettingActivity"
+            android:name="com.sigarda.jurnalkas.ui.activity.Settings.SettingActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activity.splash.SplashActivity"
+            android:name="com.sigarda.jurnalkas.ui.activity.splash.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,17 +37,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.activity.login.LoginActivity"
+            android:name="com.sigarda.jurnalkas.ui.activity.login.LoginActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.activity.register.RegisterActivity"
+            android:name="com.sigarda.jurnalkas.ui.fragment.register.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activity.auth.AuthActivity"
+            android:name="com.sigarda.jurnalkas.ui.activity.auth.AuthActivity"
             android:exported="false"
             tools:ignore="DuplicateActivity" />
         <activity
-            android:name=".ui.activity.main.MainActivity"
+            android:name="com.sigarda.jurnalkas.ui.activity.main.MainActivity"
             android:exported="false" />
     </application>
 

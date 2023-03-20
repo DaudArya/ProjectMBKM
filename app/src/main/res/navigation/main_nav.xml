@@ -6,17 +6,17 @@
     app:startDestination="@id/homeFragment3">
     <fragment
         android:id="@+id/analyticsFragment2"
-        android:name="com.example.and_project_mbkm.ui.fragment.analytics.AnalyticsFragment"
+        android:name="com.sigarda.jurnalkas.ui.fragment.analytics.AnalyticsFragment"
         android:label="fragment_analytics"
         tools:layout="@layout/fragment_analytics" />
     <fragment
         android:id="@+id/walletFragment3"
-        android:name="com.example.and_project_mbkm.ui.fragment.wallet.WalletFragment"
+        android:name="com.sigarda.jurnalkas.ui.fragment.wallet.WalletFragment"
         android:label="fragment_wallet"
         tools:layout="@layout/fragment_wallet" />
     <fragment
         android:id="@+id/homeFragment3"
-        android:name="com.example.and_project_mbkm.ui.fragment.home.HomeFragment"
+        android:name="com.sigarda.jurnalkas.ui.fragment.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -34,12 +34,16 @@
     </fragment>
     <fragment
         android:id="@+id/calendarFragment"
-        android:name="com.example.and_project_mbkm.ui.fragment.calendar.CalendarFragment"
+        android:name="com.sigarda.jurnalkas.ui.fragment.calendar.CalendarFragment"
         android:label="fragment_calendar"
         tools:layout="@layout/fragment_calendar" />
     <fragment
         android:id="@+id/spendingFragment"
-        android:name="com.example.and_project_mbkm.ui.fragment.spending.SpendingFragment"
+        android:name="com.sigarda.jurnalkas.ui.fragment.spending.SpendingFragment"
         android:label="fragment_spending"
-        tools:layout="@layout/fragment_spending" />
+        tools:layout="@layout/fragment_spending" >
+        <action
+            android:id="@+id/action_spendingFragment_to_homeFragment3"
+            app:destination="@id/homeFragment3" />
+    </fragment>
 </navigation>

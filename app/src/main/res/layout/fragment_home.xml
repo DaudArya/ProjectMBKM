@@ -18,7 +18,7 @@
         tools:layout_editor_absoluteX="0dp">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/totalmoney"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Rp.20.000.000"
@@ -146,6 +146,7 @@
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="450dp"
+        android:backgroundTint="@color/cardColor"
         android:background="@drawable/view_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -156,7 +157,7 @@
         app:layout_constraintVertical_bias="0.973">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/profile_add"
+            android:id="@+id/addTransaction"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end|bottom"
@@ -171,7 +172,74 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.959" />
 
+        <TextView
+            android:id="@+id/title_recent_transaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_semibold"
+            android:textColor="@color/black"
+            android:text="@string/text_recent_transactions"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.099"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/totalIncomExpense"
+            app:layout_constraintVertical_bias="0.053" />
+
+        <LinearLayout
+            android:id="@+id/totalIncomExpense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <include
+                android:id="@+id/income_card_view"
+                layout="@layout/content_income_expense_card_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+            <include
+                android:id="@+id/expense_card_view"
+                layout="@layout/content_income_expense_card_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/transaction_rv"
+            android:layout_width="match_parent"
+            android:layout_height="310dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_recent_transaction"
+            app:layout_constraintVertical_bias="0.0"
+            tools:listitem="@layout/item_spending" />
+
+        <ViewStub
+            android:id="@+id/emptyStateLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout="@layout/content_empty_state_layout"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

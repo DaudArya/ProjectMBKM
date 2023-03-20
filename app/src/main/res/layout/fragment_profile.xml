@@ -7,6 +7,8 @@
     tools:context="ui.fragment.setting.ProfileFragment"
     android:background="@color/cardColor">
 
+
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarId"
         android:layout_width="match_parent"
@@ -35,13 +37,26 @@
         android:id="@+id/profile_image"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:src="@drawable/ic_baseline_account_circle_24"
         app:civ_border_color="@color/teal"
         app:civ_border_width="1dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbarId" />
+
+    <ImageView
+        android:id="@+id/buttonPicture"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/addpicture"
+        app:layout_constraintBottom_toTopOf="@+id/layout_username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarId"
+        app:layout_constraintVertical_bias="0.84" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layout_username"
@@ -49,12 +64,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
-        android:hint="@string/username"
+        android:inputType="text"
         app:boxBackgroundColor="@color/grey"
         app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile_image">
 
@@ -63,9 +79,9 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/username"
-            android:inputType="text"
             android:maxLines="1"
+            android:textColor="@color/blueDark"
+            android:hint="@string/username"
             android:textColorHint="#546E7A" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -89,56 +105,9 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/name"
-            android:textColorHint="#546E7A" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layout_date_of_birth"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:hint="@string/age"
-        app:boxBackgroundColor="@color/grey"
-        app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_full_name">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/date_of_birth_edit_text"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
             android:maxLines="1"
-            android:textColorHint="#546E7A" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layout_address"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:hint="@string/address"
-        app:boxBackgroundColor="@color/grey"
-        app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_date_of_birth">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/address_edit_text"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
+            android:textColor="@color/blueDark"
+            android:hint="@string/name"
             android:textColorHint="#546E7A" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -147,14 +116,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="24dp"
         android:text="@string/edit_profile"
         android:textColor="@color/white"
         app:backgroundTint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_address" />
+        app:layout_constraintTop_toBottomOf="@+id/layout_full_name" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogout"

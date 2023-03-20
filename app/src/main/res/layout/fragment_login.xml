@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cardColor"
-    tools:context=".ui.activity.login.LoginFragment">
+    tools:context=".ui.fragment.login.LoginFragment">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -44,6 +44,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
+                android:textColor="@color/blueDark"
                 android:maxLines="1"
                 android:textColorHint="@color/dark_blue"
                 app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout" />
@@ -71,6 +72,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
+                android:textColor="@color/blueDark"
                 android:maxLines="1"
                 android:textColorHint="@color/dark_blue"
                 app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout" />

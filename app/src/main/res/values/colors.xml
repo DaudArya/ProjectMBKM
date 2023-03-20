@@ -17,6 +17,10 @@
     <color name="primarytoolbarColor">#00CCFF</color>
     <color name="loginBkColor">#f0f0f0</color>
 
+    <color name="date_true">#2c2e31</color>
+    <color name="date_false1">#c6c9cf</color>
+    <color name="date_false2">#1de9b6</color>
+
     <!--colors for card-->
     <color name="whiteCardColor">#fff</color>
 
@@ -25,6 +29,9 @@
     <color name="textInputOutlineColor">#6ff9ff</color>
     <color name="text">#143539</color>
     <color name="login">#708E9394</color>
+
+    <color name="red">#FF0000</color>
+    <color name="green">#07A304</color>
 
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
@@ -42,4 +49,10 @@
     <color name="grey">#6FB6B6B6</color>
 
     <color name="yellow">#EFB200</color>
+
+    <color name="blue_500">#006AF6</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="background">#f9f9f9</color>
+    <color name="income">#6FCF97</color>
+    <color name="expense">#EB5757</color>
 </resources>

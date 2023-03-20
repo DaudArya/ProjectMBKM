@@ -6,6 +6,6 @@
     app:startDestination="@id/profileFragment2">
     <fragment
         android:id="@+id/profileFragment2"
-        android:name="com.example.and_project_mbkm.ui.fragment.setting.ProfileFragment"
+        android:name="com.sigarda.jurnalkas.ui.fragment.setting.ProfileFragment"
         android:label="ProfileFragment" />
 </navigation>
