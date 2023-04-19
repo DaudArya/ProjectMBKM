@@ -10,8 +10,8 @@ import com.example.and_project_mbkm.data.local.preference.UserDataStoreManager
 import com.example.and_project_mbkm.data.network.model.auth.register.RegisterRequestBody
 import com.example.and_project_mbkm.data.network.model.auth.register.RegisterResponse
 import com.example.and_project_mbkm.data.repository.AuthApiRepository
-import com.example.and_project_mbkm.model.User
-import com.example.and_project_mbkm.model.usecase.RegisterUseCase
+import com.example.and_project_mbkm.ui.fragment.setting.model.User
+import com.example.and_project_mbkm.ui.fragment.setting.model.usecase.RegisterUseCase
 import com.example.and_project_mbkm.wrapper.Constant
 import com.example.and_project_mbkm.wrapper.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel

@@ -54,10 +54,7 @@ class HomeFragment : Fragment() {
 
     private fun goToSetting (){
         binding.setting.setOnClickListener(){
-            requireActivity().run {
-                val intent = Intent(this , SettingActivity::class.java)
-                startActivity(intent)
+            findNavController().navigate(R.id.action_homeFragment3_to_settingFragment)
             }
         }
     }
-}

@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_homeFragment3_to_spendingFragment"
             app:destination="@id/spendingFragment" />
+        <action
+            android:id="@+id/action_homeFragment3_to_settingFragment"
+            app:destination="@id/settingFragment" />
     </fragment>
     <fragment
         android:id="@+id/calendarFragment"
@@ -42,4 +45,17 @@
         android:name="com.example.and_project_mbkm.ui.fragment.spending.SpendingFragment"
         android:label="fragment_spending"
         tools:layout="@layout/fragment_spending" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.and_project_mbkm.ui.fragment.setting.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_settingFragment_to_premiumFragment2"
+            app:destination="@id/premiumFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/premiumFragment2"
+        android:name="com.example.and_project_mbkm.ui.fragment.PremiumFragment"
+        android:label="PremiumFragment" />
 </navigation>

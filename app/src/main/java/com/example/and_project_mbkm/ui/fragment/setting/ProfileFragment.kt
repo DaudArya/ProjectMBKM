@@ -20,7 +20,7 @@ import androidx.navigation.fragment.findNavController
 import coil.load
 import com.example.and_project_mbkm.R
 import com.example.and_project_mbkm.databinding.FragmentProfileBinding
-import com.example.and_project_mbkm.model.User
+import com.example.and_project_mbkm.ui.fragment.setting.model.User
 import com.example.and_project_mbkm.ui.activity.auth.AuthActivity
 import com.example.and_project_mbkm.wrapper.Extension.loadImage
 import com.example.and_project_mbkm.wrapper.Extension.showLongToast

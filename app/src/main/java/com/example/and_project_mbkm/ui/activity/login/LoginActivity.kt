@@ -8,7 +8,7 @@ import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.and_project_mbkm.databinding.ActivityLoginBinding
-import com.example.and_project_mbkm.model.User
+import com.example.and_project_mbkm.ui.fragment.setting.model.User
 import com.example.and_project_mbkm.ui.activity.main.MainActivity
 import com.example.and_project_mbkm.ui.activity.register.RegisterActivity
 import com.example.and_project_mbkm.wrapper.Extension.isEmailValid
@@ -27,7 +27,7 @@ data class LoginState(
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
 
-    private val viewModel: LoginViewModel by viewModels()
+    private val viewModel: com.example.and_project_mbkm.ui.activity.login.LoginViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

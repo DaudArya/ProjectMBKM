@@ -6,7 +6,7 @@ import com.example.and_project_mbkm.data.local.preference.UserDataStoreManager
 import com.example.and_project_mbkm.data.network.model.auth.login.email.LoginRequestBody
 import com.example.and_project_mbkm.data.network.model.auth.login.email.LoginResponse
 import com.example.and_project_mbkm.data.repository.AuthApiRepository
-import com.example.and_project_mbkm.model.usecase.LoginUseCase
+import com.example.and_project_mbkm.ui.fragment.setting.model.usecase.LoginUseCase
 import com.example.and_project_mbkm.wrapper.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
@@ -25,8 +25,8 @@ class LoginViewModel @Inject constructor(
     private var _postLoginUserResponse = MutableLiveData<Resource<LoginResponse>>()
     val postLoginUserResponse: LiveData<Resource<LoginResponse>> get() = _postLoginUserResponse
 
-    private var _state = MutableLiveData(LoginState())
-    val state: LiveData<LoginState> = _state
+    private var _state = MutableLiveData(com.example.and_project_mbkm.ui.activity.login.LoginState())
+    val state: LiveData<com.example.and_project_mbkm.ui.activity.login.LoginState> = _state
 
     fun statusLogin(isLogin: Boolean) {
         viewModelScope.launch {

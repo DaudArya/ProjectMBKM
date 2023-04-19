@@ -4,9 +4,9 @@ import android.util.Log
 import androidx.lifecycle.*
 import com.example.and_project_mbkm.data.local.datastore.UserDataStore
 import com.example.and_project_mbkm.data.local.preference.UserDataStoreManager
-import com.example.and_project_mbkm.model.User
-import com.example.and_project_mbkm.model.usecase.GetUserDataUseCase
-import com.example.and_project_mbkm.model.usecase.UpdateUserDataUseCase
+import com.example.and_project_mbkm.ui.fragment.setting.model.User
+import com.example.and_project_mbkm.ui.fragment.setting.model.usecase.GetUserDataUseCase
+import com.example.and_project_mbkm.ui.fragment.setting.model.usecase.UpdateUserDataUseCase
 import com.example.and_project_mbkm.wrapper.Constant
 import com.example.and_project_mbkm.wrapper.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel

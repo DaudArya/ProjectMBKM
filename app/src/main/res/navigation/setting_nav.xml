@@ -2,4 +2,11 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/setting_nav" />
+    android:id="@+id/setting_nav"
+    app:startDestination="@id/premiumFragment">
+    <fragment
+        android:id="@+id/premiumFragment"
+        android:name="com.example.and_project_mbkm.ui.fragment.PremiumFragment"
+        android:label="PremiumFragment"
+        tools:layout="@layout/fragment_premium" />
+</navigation>

@@ -25,7 +25,7 @@ class LoginFragment : Fragment() {
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
 
-    private val viewModel: LoginViewModel by viewModels()
+    private val viewModel: com.example.and_project_mbkm.ui.activity.login.LoginViewModel by viewModels()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

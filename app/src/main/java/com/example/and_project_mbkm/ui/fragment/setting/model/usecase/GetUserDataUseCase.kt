@@ -1,7 +1,7 @@
-package com.example.and_project_mbkm.model.usecase
+package com.example.and_project_mbkm.ui.fragment.setting.model.usecase
 
 import com.example.and_project_mbkm.data.local.entity.toUser
-import com.example.and_project_mbkm.model.User
+import com.example.and_project_mbkm.ui.fragment.setting.model.User
 import com.example.and_project_mbkm.wrapper.Resource
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow

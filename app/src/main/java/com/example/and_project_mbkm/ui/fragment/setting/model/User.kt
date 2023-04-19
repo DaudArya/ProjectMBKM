@@ -1,4 +1,4 @@
-package com.example.and_project_mbkm.model
+package com.example.and_project_mbkm.ui.fragment.setting.model
 
 import android.graphics.Bitmap
 import com.example.and_project_mbkm.data.local.entity.UserEntity

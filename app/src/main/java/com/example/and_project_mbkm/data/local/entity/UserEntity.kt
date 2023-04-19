@@ -4,7 +4,7 @@ import android.graphics.Bitmap
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.example.and_project_mbkm.model.User
+import com.example.and_project_mbkm.ui.fragment.setting.model.User
 import java.io.Serializable
 
 @Entity(tableName = "users")
