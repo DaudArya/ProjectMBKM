@@ -107,7 +107,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -122,7 +122,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="340dp"
-                android:layout_height="320dp"
+                android:layout_height="390dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 app:cardCornerRadius="25dp"
@@ -144,22 +144,22 @@
                             android:id="@+id/textView36"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:text="Alamat Email"
                             android:textColor="@color/blueDark"
-                            android:textStyle="bold"
-                            android:text="Alamat Email" />
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/textView37"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/blueDark"
-                            android:text="daudwakwaw@gmail.com" />
+                            android:text="daudwakwaw@gmail.com"
+                            android:textColor="@color/blueDark" />
 
                         <View
                             android:id="@+id/view"
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@color/blueDark20percent"/>
+                            android:background="@color/blueDark20percent" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -172,22 +172,80 @@
                             android:id="@+id/textView45"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:text="Nama Pengguna"
                             android:textColor="@color/blueDark"
-                            android:textStyle="bold"
-                            android:text="Nama Pengguna" />
+                            android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/textView44"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/blueDark"
-                            android:text="daudwakwaw" />
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textView44"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="daudwakwaw"
+                                android:textColor="@color/blueDark" />
+
+                            <ImageView
+                                android:id="@+id/imageView32"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.05"
+                                app:srcCompat="@drawable/check_circle" />
+                        </LinearLayout>
 
                         <View
                             android:id="@+id/view2"
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="@color/blueDark20percent"/>
+                            android:background="@color/blueDark20percent" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Kata Sandi"
+                            android:textColor="@color/blueDark"
+                            android:textStyle="bold" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:inputType="textPassword"
+                                android:text="pppppp"
+                                android:textColor="@color/blueDark" />
+
+                            <ImageView
+                                android:id="@+id/imageView34"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.05"
+                                android:layout_gravity="center_vertical"
+                                app:srcCompat="@drawable/eye" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view6"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/blueDark20percent" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -204,12 +262,27 @@
                             android:textStyle="bold"
                             android:text="Jenis Kelamin" />
 
-                        <TextView
-                            android:id="@+id/textView42"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/blueDark"
-                            android:text="Pria" />
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textView42"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Pria"
+                                android:textColor="@color/blueDark" />
+
+                            <ImageView
+                                android:id="@+id/imageView33"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.05"
+                                android:layout_gravity="center_vertical"
+                                app:srcCompat="@drawable/chevron_down" />
+                        </LinearLayout>
 
                         <View
                             android:id="@+id/view3"
