@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blueDark"
+    tools:context=".ui.activity.Settings.SettingActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/imageView16"
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:background="@drawable/view_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ImageView
+            android:id="@+id/imageView17"
+            android:layout_width="90dp"
+            android:layout_height="5dp"
+            app:layout_constraintBottom_toTopOf="@id/linearLayoutBlok"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView16"
+            app:srcCompat="@drawable/garis_upil_kecil" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/bg_biru_oval"
+            android:drawableStart="@drawable/settings"
+            android:drawablePadding="4dp"
+            android:paddingStart="8dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="8dp"
+            android:text="Pengaturan"
+            android:textColor="#F6FBFF"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayoutBlok"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView17" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutBlok"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginTop="100dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pengingat"
+                    android:textColor="@color/blueDark"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="350dp"
+                android:layout_height="170dp"
+                android:layout_marginTop="20dp"
+                app:cardElevation="10dp"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="40dp"
+                    android:paddingRight="30dp"
+                    android:paddingLeft="30dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Switch
+                            android:id="@+id/switch1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Pengingat Harian"
+                            android:textColor="@color/blueDark"
+                            android:textStyle="bold"
+                            android:thumbTintMode="multiply"
+                            android:trackTintMode="screen"
+                            android:trackTint="#013463"
+                            android:thumbTint="#f6fbff"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView47"
+                            android:layout_width="145dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Waktu Pengingat"
+                            android:textStyle="bold"
+                            android:textColor="@color/blueDark"/>
+
+                        <EditText
+                            android:id="@+id/editTextTime"
+                            android:layout_width="10dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="1"
+                            android:ems="6"
+                            android:inputType="time" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imageView35"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/done" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
